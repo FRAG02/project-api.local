@@ -11,8 +11,8 @@ class AuthController
     public function __construct()
     {
         require_once __DIR__ . '/../config/db.php';
-        global $pdo; // Объявляем переменную как глобальную
-        $this->pdo = $pdo; // Теперь $pdo доступен внутри класса
+        global $pdo;
+        $this->pdo = $pdo; 
     }
 
     public function login($data)
@@ -21,7 +21,7 @@ class AuthController
         $stmt->execute([$data['username']]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($user && password_verify($data['password'], $user['password'])) {
-            unset($user['password']); // Убираем пароль из ответа
+            unset($user['password']); 
 
             return [
                 'success' => true,
