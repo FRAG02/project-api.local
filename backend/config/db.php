@@ -1,9 +1,9 @@
 <?php
 
-$host = 'MariaDB-11.2'; // Если в твоем OpenServer так настроено, оставляем
+$host = 'MariaDB-11.2'; 
 $db_name = 'company';
 $username = 'root';
-$password = ''; // Убедись, что пароль правильный
+$password = ''; 
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db_name;charset=$charset";
