@@ -11,7 +11,7 @@ const Register = ({ onSwitchToLogin }) => {
         console.log('Register data:', { username, password }); // Логируем данные
         try {
             const response = await register(username, password);
-            console.log('Register response:', response); // Логируем ответ
+            console.log('Register response:', response); 
             if (response.success) {
                 alert(response.message);
                 onSwitchToLogin();
