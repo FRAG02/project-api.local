@@ -9,7 +9,7 @@ require_once __DIR__ . '/controllers/EquipmentController.php';
 
 
 $requestMethod = $_SERVER['REQUEST_METHOD'];
-// Получаем URI и убираем лишние символы
+
 $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $requestUri = trim($requestUri, '/');
 $requestUriParts = explode('/', $requestUri);
